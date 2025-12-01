@@ -315,10 +315,6 @@
 </head>
 <body>
 
-<video autoplay loop muted playsinline id="bg-video">
-  <source src="https://shifted-edsu.tail1f6477.ts.net/ipfs/QmeWzM9CLT3AR1HTpKKDJsr6GpBu1WoUssd2z5sQHb9T49" type="video/mp4">
-</video>
-
 <header><h1>SHIFTED Storage: IPFS Cluster through Tailscale — Upload & Index</h1></header>
 <main>
 
@@ -541,7 +537,7 @@ refreshBtn.onclick = () => {
 };
 
 window.view = (cid) => {
-  const gatewayUrl = 'https://shifted-edsu.tail1f6477.ts.net';
+  const gatewayUrl = `http://${window.location.host}:8080`;
   window.open(`${gatewayUrl}/ipfs/${cid}`);
 };
 
